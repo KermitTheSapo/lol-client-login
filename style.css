@@ -5,6 +5,18 @@
     font-family: 'Inter', sans-serif;
 }
 
+::selection {
+    color: red;
+    background-color: rgb(235, 228, 228);
+}
+
+img {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    user-select: none;
+}
+
 main {
     display: flex;
     height: 100%;
@@ -15,11 +27,17 @@ main {
     display: flex;
     justify-content: center;
     height: 100%;
+    width: 40%;
 }
 
 .riot {
     display: flex;
     justify-content: center;
+}
+
+.riot img {
+    width: 10.1vw;
+    height: 5.9vh;
 }
 
 .separacao {
@@ -52,11 +70,8 @@ form {
 input {
     background-color: #E8E6E6;
     border-radius: 5px;
+    font-size: 0.8vw;
 }
-/* 
-input:: {
-    
-} */
 
 .label-nome {
     color: #716E6E;
@@ -65,7 +80,7 @@ input:: {
     top: 18px;
     left: 8px;
     width: 100%;
-    font-size: 12px;
+    font-size: 0.5vw;
 }
 
 .nome, .senha {
@@ -126,15 +141,15 @@ a .face, a .google, a .apple {
     display: flex;
     justify-content: space-between;
     align-self: center;
-    margin-right: 220px;
+    margin-right: 10.31vw;
 }
 .manter p {
     font-weight: 700;
 }
 
 .button {
-    width: 18px;
-    height: 18px;
+    width: 0.8vw;
+    height: 1.7vh;
     background-color: #D9D9D9;
     border-radius: 3px;
 }
@@ -159,8 +174,8 @@ a .face, a .google, a .apple {
 
 .seta {
     background-color: #FF002E36;
-    width: 51px;
-    height: 47px;
+    width: 2.3vw;
+    height: 4.5vh;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -170,8 +185,8 @@ a .face, a .google, a .apple {
 
 .seta-on{
     background-color: #FF002E;
-    width: 51px;
-    height: 47px;
+    width: 2.3vw;
+    height: 4.5vh;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -186,5 +201,174 @@ a .face, a .google, a .apple {
 
 .imagem figure img {
     width: 100%;
-    height: 90%;
+    height: 95vh;
+}
+
+@media (max-width: 2560px) {
+    .label-nome {
+        font-size: 0.6vw;
+    } 
+    .manter p {
+        font-size: 0.8vw;
+    }
+}
+
+@media (max-width:1440px) {
+    .iniciar a p {
+        font-size: 0.8vw;
+    }
+    .label-nome{
+        top: 12px;
+        left: 8px;
+    }
+}
+
+@media (max-width:1024px) {
+    .label-nome {
+        font-size: 1vw;
+    }
+    input {
+        font-size: 1vw;
+    }
+    .imagem figure img {
+        height: 90vh;
+    }
+    .manter {
+        width: 80%;
+    }
+    .manter p {
+        font-size: 1.2vw;
+        align-items: center;
+    }
+    .seta {
+        width: 3.3vw;
+        height: 4.5vh;
+    }
+    .seta-on {
+        width: 3.3vw;
+        height: 4.5vh;
+    }
+    .button {
+        margin-left: 50px;
+        width: 1.2vw;
+        height: 1.7vh;
+    }
+}
+
+@media (max-width:768px) {
+    main {
+        flex-direction: column-reverse;
+    }
+    .imagem {
+        width: 100%;
+        height: 40vh;
+    }
+    .imagem figure{
+        height: 40vh;
+    }
+    .imagem figure img {
+        height: 40vh;
+    }
+    .login {
+        width: 100%;
+    }
+    .riot img {
+        width: 23.1vw;
+        height: 12vh;
+    }
+    .label-nome {
+        font-size: 1.5vw;
+        top: 35px;
+    }
+    form {
+        height: 20vh;
+    }
+    input {
+        font-size: 2vw;
+    }
+    a .face, a .google, a .apple {
+        width: 10vw
+    }
+    .manter {
+        width: 100%;
+        justify-content: center;
+    }
+    .manter p {
+        margin-left: 10px;
+        font-size: 2vw;
+    }
+    .button {
+        width: 2vw;
+        height: 1.7vh;    
+    }
+    .seta {
+        width: 7vw;
+        height: 6vh;
+    }
+    .seta-on {
+        width: 7vw;
+        height: 6vh;
+    }
+    .iniciar a p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:425px) {
+    .riot img {
+        width: 30.1vw;
+        height: 12vh;
+    }
+    .label-nome {
+        font-size: 2vw;
+    }
+    a .face, a .google, a .apple {
+        width: 15vw
+    }
+    .button {
+        width: 3vw;
+        height: 1.7vh;    
+    }
+    .manter p {
+        font-size: 3vw;
+    }
+    .seta {
+        width: 9vw;
+        height: 5vh;
+    }
+    .seta-on {
+        width: 9vw;
+        height: 5vh;
+    }
+    .iniciar a p {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width:375px) {
+    .riot img {
+        width: 38vw;
+        height: 12vh;
+    }
+    .label-nome {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width:320px) {
+    .button {
+        width: 5vw;
+        height: 1.7vh;    
+    } 
+    .seta {
+        width: 11vw;
+        height: 5vh;
+    }
+    .seta-on {
+        width: 11vw;
+        height: 5vh;
+    }
+    .imagem {
+        height: 38vh;
+    }
 }
